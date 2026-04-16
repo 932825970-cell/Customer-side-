@@ -1,5 +1,11 @@
 package com.whistlestop.menu.dto;
 
+/*
+ Response object returned to the frontend for menu items.
+
+ Contains the fields the customer app needs to display
+ item name, category, prices, and availability.
+*/
 public class MenuItemResponse {
     private long id;
     private String name;
@@ -8,9 +14,15 @@ public class MenuItemResponse {
     private double largePrice;
     private boolean available;
 
+    /*
+     Empty constructor used by JSON mapping.
+    */
     public MenuItemResponse() {
     }
 
+    /*
+     Creates a menu response object with the supplied item values.
+    */
     public MenuItemResponse(long id, String name, String category, double regularPrice, double largePrice, boolean available) {
         this.id = id;
         this.name = name;

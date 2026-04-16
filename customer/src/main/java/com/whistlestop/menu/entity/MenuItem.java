@@ -1,5 +1,11 @@
 package com.whistlestop.menu.entity;
 
+/*
+ Internal menu model used by the backend.
+
+ Stores the data needed for menu display and for deciding
+ whether an item should appear in quick picks.
+*/
 public class MenuItem {
     private long id;
     private String name;
@@ -9,9 +15,15 @@ public class MenuItem {
     private boolean quickPick;
     private boolean available;
 
+    /*
+     Empty constructor used when JSON or frameworks need one.
+    */
     public MenuItem() {
     }
 
+    /*
+     Creates a menu item with the supplied values.
+    */
     public MenuItem(long id, String name, String category, double regularPrice, double largePrice, boolean quickPick, boolean available) {
         this.id = id;
         this.name = name;

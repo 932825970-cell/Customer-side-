@@ -2,6 +2,12 @@ package com.whistlestop.common.constant;
 
 import java.time.LocalTime;
 
+/*
+ Business rules shared across the customer backend.
+
+ Stores fixed opening hours and slot settings so schedule logic
+ uses one consistent source of truth.
+*/
 public final class BusinessConstants {
     public static final LocalTime WEEKDAY_OPEN = LocalTime.of(6, 30);
     public static final LocalTime WEEKDAY_CLOSE = LocalTime.of(19, 0);
